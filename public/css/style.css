@@ -1,0 +1,153 @@
+/*
+ - Bloco (header, footer, checkbox.
+    ex: .menu)
+ - Elemento (elemento-filho do Bloco ex: item de menu, item de lista, label do checkbox.
+    ex: menu__item, .menu__link)
+ - Modificador (variante de um Bloco ou Elemento ex: disabled, checked, full-width, dark.
+    ex: .menu--dark, .menu__item--disabled)
+*/
+
+@font-face {
+  font-family: "number-calculator";
+  src: url("../fonts/DS-DIGIT.TTF") format("truetype");
+  font-weight: 600;
+  font-size: normal;
+}
+
+/*    colors      */
+:root {
+  --amarelo: rgb(255, 208, 52);
+  --branca: rgb(255, 255, 255);
+  --verde-visor: rgb(169, 189, 140);
+  --verde-btn: rgb(137, 245, 255);
+  --cinza: rgb(21, 23, 24);
+  --background-case: rgb(57, 57, 57);
+  --disabled-color: rgb(72, 72, 72);
+}
+
+body {
+  background-color: rgba(255, 127, 80, 1);
+}
+
+
+header {
+  padding: 15px 15px 5px;
+}
+
+.case-calculadora {
+  max-width: 280px;
+  min-height: 515px;
+  background-color: var(--background-case);
+  border-radius: 35px;
+
+  padding: 15px 15px;
+  margin: 0 auto;
+}
+
+.padrao-btn,
+.default-button {
+  width: 60px;
+  height: 47px;
+  font-size: 1.2rem;
+  color: var(--branca);
+  background-color: var(--cinza);
+  border-style: inset;
+  border: 1px solid none;
+  border-radius: 10px;
+
+  text-transform: uppercase;
+  padding: 5px 10px;
+  margin: 3px;
+}
+
+.padrao-btn:disabled {
+  background-color: var(--disabled-color);
+}
+
+.default-button:disabled {
+  background-color: var(--disabled-color);
+}
+
+.btn-tipo1 {
+  width: 65px;
+  height: 65px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--branca);
+  border-radius: 50%;
+  background-color: var(--verde-btn);
+}
+
+.btn-soma {
+  width: 60px;
+  height: 100px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--branca);
+  background-color: var(--verde-btn);
+
+  border: 1px solid none;
+  border-radius: 10px;
+
+  position: absolute;
+  padding: 11px 23px;
+  margin: 3px;
+}
+
+.btn-tipo2 {
+  width: 50px;
+  height: 20px;
+  border-radius: 2rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--branca);
+  background-color: var(--amarelo);
+}
+
+.top-text-button {
+  text-transform: uppercase;
+  color: var(--branca);
+  margin: 0px 10px 0px;
+
+  display: inline-block;
+  position: absolute;
+}
+
+.visor-calculadora {
+  font-family: "number-calculator";
+  font-size: 3em;
+  font-style: bold;
+  width: 85%;
+  min-height: 40px;
+  background-color: var(--verde-visor);
+
+  display: block;
+  margin: 0 auto 35px;
+
+  box-shadow: 0px 5px 2px 6px rgba(72, 72, 72, 1);
+}
+
+.elemento-grafico {
+  width: 45%;
+  height: 50px;
+  background-color: black;
+  border-radius: 1rem;
+
+  display: inline-block;
+}
+
+.titulo {
+  color: var(--branca);
+  width: 50%;
+  display: inline-block;
+  text-transform: uppercase;
+
+  text-align: right;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 322px) {
+  .case-calculadora {
+    display: none;
+  }
+}

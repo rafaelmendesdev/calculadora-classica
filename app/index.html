@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="../public/css/style.css">
+
+    <script src="../public/js/main.js"></script>
+</head>
+
+<body>
+    <!-- main -->
+    <main class="case-calculadora">
+        <!-- header -->
+        <header>
+            <div class="elemento-grafico"></div>
+            <div class="titulo">
+                <p>classe <br> cla-402</p>
+            </div>
+        </header>
+        <form action="" name="calculadoraClassica">
+            <section>
+                <input class="visor-calculadora" id="visorCalculadora" type="text" class="text" name="visorCalculadora"
+                    disabled>
+            </section>
+
+            <section class="conteudo-calucladora">
+                <!-- area de inputs 1 -->
+                <input type="button" id="btnOn" class="btn-tipo1" name="btnOn" value="on|ce"></input>
+
+                <label class="top-text-button" for="">mrc</label>
+                <input type="button" class="btn-tipo2" name="btnMrc" value="" onclick="areaDeCalculo(btnMrc.value)"
+                    disabled></input>
+
+                <label class="top-text-button" for="">m-</label>
+                <input type="button" class="btn-tipo2" name="mMenor" value="" onclick="areaDeCalculo(mMenor.value)"
+                    disabled></input>
+
+                <label class="top-text-button" for="">m+</label>
+                <input type="button" class="btn-tipo2" name="mMaior" value="" onclick="areaDeCalculo(mMaior.value)"
+                    disabled></input><br>
+
+                <!-- area de inputs 2 -->
+                <input type="button" id="btnOff" class="padrao-btn" name="btnOff" value="OFF"></input>
+                <input type="button" class="default-button" name="btnRaiz" value="√"
+                    onclick="areaDeCalculo(btnRaiz.value)" disabled></input>
+                <input type="button" class="default-button" name="btnPorcento" value="%"
+                    onclick="areaDeCalculo(btnPorcento.value)" disabled></input>
+                <input type="button" class="padrao-btn" name="btnDividir" value="/"
+                    onclick="areaDeCalculo(btnDividir.value)"></input><br>
+
+                <!-- area de inputs 3 -->
+                <input type="button" class="padrao-btn" name="btnSete" value="7"
+                    onclick="areaDeCalculo(btnSete.value)"></input>
+                <input type="button" class="padrao-btn" name="btnOito" value="8"
+                    onclick="areaDeCalculo(btnOito.value)"></input>
+                <input type="button" class="padrao-btn" name="btnNove" value="9"
+                    onclick="areaDeCalculo(btnNove.value)"></input>
+                <input type="button" class="padrao-btn" name="btnMultiplicar" value="*"
+                    onclick="areaDeCalculo(btnMultiplicar.value)"></input><br>
+
+                <!-- area de inputs 4 -->
+                <input type="button" class="padrao-btn" name="btnQuatro" value="4"
+                    onclick="areaDeCalculo(btnQuatro.value)"></input>
+                <input type="button" class="padrao-btn" name="btnCinco" value="5"
+                    onclick="areaDeCalculo(btnCinco.value)"></input>
+                <input type="button" class="padrao-btn" name="btnSeis" value="6"
+                    onclick="areaDeCalculo(btnSeis.value)"></input>
+                <input type="button" class="padrao-btn" name="btnSubtrair" value="-"
+                    onclick="areaDeCalculo(btnSubtrair.value)"></input><br>
+
+                <!-- area de inputs 5 -->
+                <input type="button" class="padrao-btn" name="btnUm" value="1"
+                    onclick="areaDeCalculo(btnUm.value)"></input>
+                <input type="button" class="padrao-btn" name="btnDois" value="2"
+                    onclick="areaDeCalculo(btnDois.value)"></input>
+                <input type="button" class="padrao-btn" name="btnTres" value="3"
+                    onclick="areaDeCalculo(btnTres.value)"></input>
+                <input type="button" class="padrao-btn btn-soma" name="btnSomar" value="+"
+                    onclick="areaDeCalculo(btnSomar.value)"></input><br>
+
+                <!-- area de inputs 6 -->
+                <input type="button" class="padrao-btn" name="btnero" value="0"
+                    onclick="areaDeCalculo(btnero.value)"></input>
+                <input type="button" class="padrao-btn" name="btnPonto" value="."
+                    onclick="areaDeCalculo(btnPonto.value)"></input>
+                <input type="button" class="padrao-btn" name="btnResultado" value="="
+                    onclick="visorCalculadora.value=eval(visorCalculadora.value)"></input>
+            </section>
+        </form>
+        <!-- footer -->
+    </main>
+</body>
+<script src="../public/js/main.js"></script>
+
+</html>
